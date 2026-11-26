@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biblioteca iB2B</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="shell identity">
+      <span class="mark" aria-hidden="true">B</span>
+      <div><strong>Biblioteca iB2B</strong><small>Sistema de empréstimo de livros</small></div>
+    </div>
+  </header>
+  <main class="shell">
+    <section class="intro">
+      <div><h1>Operações da biblioteca</h1><p>Cadastre pessoas e livros, acompanhe a circulação e consulte multas.</p></div>
+      <button id="demonstrar" type="button" class="secondary">Executar demonstração</button>
+    </section>
+    <nav aria-label="Áreas da biblioteca" id="areas"></nav>
+    <div class="layout">
+      <section class="panel" aria-labelledby="form-titulo">
+        <h2 id="form-titulo">Circulação</h2>
+        <form id="operacao">
+          <label>Operação <select name="acao" id="acao"></select></label>
+          <div id="campos"></div>
+          <button id="enviar" type="submit">Executar operação</button>
+        </form>
+      </section>
+      <section class="panel results" aria-labelledby="resultados">
+        <div class="panel-head"><h2 id="resultados">Resultados da sessão</h2><button type="button" id="limpar" class="link">Limpar</button></div>
+        <p id="status" role="status">Os comprovantes e retornos aparecem aqui.</p>
+        <ol id="historico" aria-label="Histórico de operações"></ol>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
